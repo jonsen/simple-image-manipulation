@@ -20,6 +20,7 @@ type ImageFile struct {
 func Encode(iw io.Writer, img image.Image, format string) {
   switch format {
   case "jpg": jpeg.Encode(iw, img, nil)
+  case "jpeg": jpeg.Encode(iw, img, nil)
   case "png": png.Encode(iw, img)
   default: log.Fatal("Argument Error: available formats are jpg and png")
   }
